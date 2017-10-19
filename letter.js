@@ -10,6 +10,7 @@ var Letter = function(str) {
       if(this.baseValue === check) {
         this.solved = true;
         this.display = this.value;
+        return true;
       }
       else if (!this.solved) {
         this.display = "_";
@@ -21,6 +22,9 @@ var Letter = function(str) {
     this.value = str;
     this.solved = true;
     this.display = " ";
+    this.show = function(check) {
+      //nothing happens, this just needs to exist
+    }
   }
 }
 

@@ -11,8 +11,18 @@ var Word = function(newWord) {
 
   this.checkLetters = function (check) {
     this.tried.push(check);
+    var correct = false;
     for (index in this.contains) {
-      this.contains[index].show(check);
+
+      var result = this.contains[index].show(check);
+      if(result) correct = result;
+    }
+
+    if(correct) {
+      console.log("CORRECT!!!");
+    }
+    else {
+      console.log("INCORRECT!!!");
     }
   }
 
