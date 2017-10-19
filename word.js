@@ -30,7 +30,7 @@ var Word = function(newWord) {
       console.log("\nCORRECT!!!\n");
     }
     else {
-      console.log("\nINCORRECT!!!\n");
+      console.log("\nINCORRECT!!!\n".red);
       this.guesses--;
       console.log(this.guesses + " guesses remaining!!!\n");
     }
@@ -40,9 +40,9 @@ var Word = function(newWord) {
     wordToDisplay = "";
     for (index in this.contains) {
       wordToDisplay += this.contains[index].display;
-      if(this.contains[index].display !== " ") {
+      // if(this.contains[index].display !== " ") {
         wordToDisplay += " ";
-      }
+      // }
     }
     return wordToDisplay;
   }

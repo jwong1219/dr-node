@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jwong1219/node-hangman#readme",
   "dependencies": {
     "color": "^2.0.0",
+    "colors": "^1.1.2",
     "inquirer": "^3.3.0",
     "prompt": "^1.0.0"
   }
