@@ -6,23 +6,33 @@ var Word = function(newWord) {
     this.contains.push(new Letter(newWord[i]));
   }
 
+  this.solved = false;
   this.guesses = 6;
   this.tried = [];
 
   this.checkLetters = function (check) {
     this.tried.push(check);
     var correct = false;
+    this.solved = true;
     for (index in this.contains) {
 
+      //has each letter evaluate against the guessed letter, and if no letters are changed, returns false for the below logic block
       var result = this.contains[index].show(check);
       if(result) correct = result;
+
+      //check to see if letters are solved;
+      if(!this.contains[index].solved) {
+        this.solved = false;
+      }
     }
 
     if(correct) {
-      console.log("CORRECT!!!");
+      console.log("\nCORRECT!!!\n");
     }
     else {
-      console.log("INCORRECT!!!");
+      console.log("\nINCORRECT!!!\n");
+      this.guesses--;
+      console.log(this.guesses + " guesses remaining!!!\n");
     }
   }
 
