@@ -1,0 +1,25 @@
+{
+  "name": "node-hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwong1219/node-hangman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwong1219/node-hangman/issues"
+  },
+  "homepage": "https://github.com/jwong1219/node-hangman#readme",
+  "dependencies": {
+    "color": "^2.0.0",
+    "inquirer": "^3.3.0",
+    "prompt": "^1.0.0"
+  }
+}
